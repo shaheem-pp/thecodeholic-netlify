@@ -33,9 +33,9 @@
         var typed_strings = $('.typed-text').text();
         var typed = new Typed('.typed-text-output', {
             strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
+            typeSpeed: 20,
+            backSpeed: 10,
+            smartBackspace: true,
             loop: true
         });
     }
