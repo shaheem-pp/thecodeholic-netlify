@@ -97,7 +97,7 @@
 					<h3 class="text-white font-weight-normal mb-3">I'm</h3>
 					<h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">
 						Shaheem PP </h1>
-					<h1 class="d-inline text-white">Developer</h1>
+					<h3 id="animate" class="d-inline text-white"></h3>
 					<br>
 					<br>
 					<a href="Assets/Others/resume.pdf" target="_blank" class="btn btn-outline-light">Resume</a>
@@ -694,6 +694,21 @@
 		<i class="fa fa-angle-double-up"></i>
 	</a>
 	<!-- JavaScript Libraries -->
+	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+	<script>
+		var typed = new Typed('#animate', {
+			strings: [
+				'Student by Morning'
+				, 
+				'Developer by night'
+			],
+			smartBackspace: true,
+			typeSpeed: 50,
+			backDelay: 1000,
+			backSpeed: 20,
+			loop: true,
+		});
+	</script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 	<link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
@@ -708,6 +723,7 @@
 	<script src="mail/contact.js"></script>
 	<!-- Template Javascript -->
 	<script src="js/main.js"></script>
+	
 </body>
 
 </html>
