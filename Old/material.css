@@ -1,0 +1,179 @@
+/* General Styles */
+body {
+    background-color: #121212; /* Material dark background */
+    color: #FFFFFF; /* Light text for dark themes */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #BB86FC; /* Material purple accent */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFB74D; /* Material amber hover */
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1F1F1F; /* Darker navbar */
+    border-bottom: 1px solid #333333;
+}
+
+.navbar-brand, .nav-link {
+    color: #FFFFFF !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #BB86FC !important;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(160deg, #1F1F1F 60%, #333333);
+    border-bottom: 1px solid #333333;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #EDEDED;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #B3B3B3;
+}
+
+.hero button {
+    background-color: #BB86FC;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: #FFB74D;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 40px 20px;
+}
+
+.portfolio h2 {
+    color: #EDEDED;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.card {
+    background-color: #1F1F1F;
+    border: 1px solid #333333;
+    color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    color: #BB86FC;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #B3B3B3;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #FFB74D;
+}
+
+/* Contact Form */
+.contact {
+    padding: 40px 20px;
+    background-color: #1F1F1F;
+}
+
+.contact h2 {
+    color: #EDEDED;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact .form-control {
+    background-color: #121212;
+    color: #FFFFFF;
+    border: 1px solid #333333;
+}
+
+.contact .form-control:focus {
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    border-color: #BB86FC;
+    box-shadow: none;
+}
+
+.contact button {
+    background-color: #BB86FC;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact button:hover {
+    background-color: #FFB74D;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    color: #B3B3B3;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+    border-top: 1px solid #333333;
+}
+
+footer a {
+    color: #BB86FC;
+}
+
+footer a:hover {
+    color: #FFB74D;
+}
