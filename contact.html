@@ -38,13 +38,27 @@
 				message: document.getElementById("message").value,
 			};
 
-			emailjs.send("service_w1fc4zl", "template_r4z66c8", params)
-				.then(() => {
-					alert("Email sent successfully!");
-				})
-				.catch((error) => {
-					alert("Failed to send email: " + error.text);
-				});
+			function checkParams(params) {
+				for (let key in params) {
+					if (key !== "phone" && params[key].trim() === "") {
+						return false;
+					}
+				}
+				return true;
+			}
+
+			if (checkParams(params)) {
+				emailjs.send("service_w1fc4zl", "template_r4z66c8", params)
+					.then(() => {
+						alert("Email sent successfully!");
+						window.location.reload();
+					})
+					.catch((error) => {
+						alert("Failed to send email: " + error.text);
+					});
+			} else {
+				alert("Please fill out all the fields.");
+			}
 		}
 	</script>
 </head>
@@ -94,44 +108,43 @@
 					</div>
 					<div class="row gx-5 justify-content-center">
 						<div class="col-lg-8 col-xl-6">
-							<!-- * * * * * * * * * * * * * * *-->
-							<!-- * * SB Forms Contact Form * *-->
-							<!-- * * * * * * * * * * * * * * *-->
-							<!-- This form is pre-integrated with SB Forms.-->
-							<!-- To make this form functional, sign up at-->
-							<!-- https://startbootstrap.com/solution/contact-forms-->
-							<!-- to get an API token!-->
 							<form>
 								<div class="form-row">
 									<div class="form-floating mb-3">
 										<input type="text" class="form-control" id="name" name="name"
 											placeholder="Your Name" required />
-										<label for="name">Your Name</label>
+										<label for="name">Who are we talking to today? <span
+												class="text-danger">*</span></label>
 										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-floating mb-3">
 										<input type="email" class="form-control" id="email" name="email"
 											placeholder="Your Email" required />
-										<label for="email">Your Email</label>
+										<label for="email">How can we get in touch with you? <span
+												class="text-danger">*</span></label>
 										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-floating mb-3">
 										<input type="tel" class="form-control" id="phone" name="phone"
 											placeholder="Your Phone Number" />
-										<label for="phone">Your Phone Number</label>
+										<label for="phone">Got a phone number? (Optional)</label>
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="form-floating mb-3">
 									<input type="text" class="form-control" id="subject" name="subject"
-										placeholder="Subject" required />
-									<label for="subject">Subject</label>
-									<p class="help-block text-danger"></p>
+										placeholder="Subject" maxlength="50" required
+										oninput="updateSubjectCounter()" />
+									<label for="subject">What's on your mind? <span class="text-danger">*</span></label>
+									<p class="help-block text-danger m-0"></p>
+									<p class="text-muted text-end"><small id="subject-counter">0/50 characters</small>
+									</p>
 								</div>
 								<div class="form-floating mb-3">
 									<textarea class="form-control" id="message" name="message" placeholder="Message"
 										style="height: 150px" required></textarea>
-									<label for="message">Message</label>
+									<label for="message">Would you like to talk more about it?
+										<span class="text-danger">*</span></label>
 									<p class="help-block text-danger"></p>
 								</div>
 								<div>
@@ -140,6 +153,15 @@
 										Message</button>
 								</div>
 							</form>
+
+							<script>
+								function updateSubjectCounter() {
+									const subjectInput = document.getElementById('subject');
+									const counter = document.getElementById('subject-counter');
+									const currentLength = subjectInput.value.length;
+									counter.textContent = `${currentLength}/50 characters`;
+								}
+							</script>
 						</div>
 					</div>
 				</div>
