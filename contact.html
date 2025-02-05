@@ -112,22 +112,21 @@
 								<div class="form-row">
 									<div class="form-floating mb-3">
 										<input type="text" class="form-control" id="name" name="name"
-											placeholder="Your Name" required />
-										<label for="name">Who are we talking to today? <span
-												class="text-danger">*</span></label>
+											placeholder="What's your name? " required />
+										<label for="name">What's your name? <span class="text-danger">*</span></label>
 										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-floating mb-3">
 										<input type="email" class="form-control" id="email" name="email"
 											placeholder="Your Email" required />
-										<label for="email">How can we get in touch with you? <span
+										<label for="email">Your email address <span
 												class="text-danger">*</span></label>
 										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-floating mb-3">
 										<input type="tel" class="form-control" id="phone" name="phone"
-											placeholder="Your Phone Number" />
-										<label for="phone">Got a phone number? (Optional)</label>
+											pattern="\+?[0-9\s\-]{7,15}" placeholder="Phone number (Optional, include country code)" />
+										<label for="phone">Phone number (Optional, include country code)</label>
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
@@ -135,15 +134,15 @@
 									<input type="text" class="form-control" id="subject" name="subject"
 										placeholder="Subject" maxlength="50" required
 										oninput="updateSubjectCounter()" />
-									<label for="subject">What's on your mind? <span class="text-danger">*</span></label>
+									<label for="subject">Subject <span class="text-danger">*</span></label>
 									<p class="help-block text-danger m-0"></p>
 									<p class="text-muted text-end"><small id="subject-counter">0/50 characters</small>
 									</p>
 								</div>
 								<div class="form-floating mb-3">
-									<textarea class="form-control" id="message" name="message" placeholder="Message"
+									<textarea class="form-control" id="message" name="message" placeholder="Your message"
 										style="height: 150px" required></textarea>
-									<label for="message">Would you like to talk more about it?
+									<label for="message">Your message
 										<span class="text-danger">*</span></label>
 									<p class="help-block text-danger"></p>
 								</div>
@@ -176,7 +175,9 @@
 					<div class="small m-0"> Copyright &copy; <span id="year"></span> shaheem.dev </div>
 				</div>
 				<div class="col-auto">
-					<!-- <a class="small" href="#!">Privacy</a><span class="mx-1">&middot;</span><a class="small" href="#!">Terms</a><span class="mx-1">&middot;</span><a class="small" href="#!">Contact</a> -->
+					<a href="https://social.shaheem.dev" target="_blank" class="small hover m-0 text-decoration-none">
+						<i class="bi bi-link-45deg"></i> Around the web
+					</a>
 				</div>
 			</div>
 		</div>
