@@ -145,28 +145,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- Core theme JS-->
 	<script src="js/scripts.js"></script>
+	<script src="js/projects.js"></script>
 	<script>
-		const projects = [{
-			title: "Food For All",
-			image: "Assets/Project/images/foodforall/img1.png",
-			shortContent: "A platform to connect donors and NGOs to combat food waste. <span class='text-muted'>see more...</span>",
-			description: `<p><strong>Food For All</strong> was built during Fosshack 3 to help restaurants and food providers
-				donate surplus food to NGOs and volunteers supporting those in need. We developed the platform using
-				<strong>Django</strong> and <strong>Next.js</strong>, with <strong>PostGIS</strong> to store location data. The
-				platform includes a <strong>REST API</strong> to connect the frontend and backend.</p>
-
-			<p>NGOs and volunteers can register with their location, and whenever a restaurant or food provider posts a donation,
-				those within a <strong>5-10 km radius</strong> receive a notification. The existing system mainly relies on
-				<strong>WhatsApp communities</strong>, where messages often don't reach the right people at the right time.
-				<em>Food For All</em> solves this issue by providing a <strong>centralized platform</strong> where donations can
-				be efficiently matched with nearby volunteers.</p>`,
-			links: {
-				"bi bi-github": "https://github.com/AkshayBenny/food-surplus-detection"
-			},
-			stack: ["Django", "Next.js", "REST API", "PostGis"],
-			status: "Completed",
-			category: "Hackathon Project"
-		}];
+		
 
 		function getStatusBadge(status) {
 			const statusClass = status === "Completed" ? "success" : "warning";

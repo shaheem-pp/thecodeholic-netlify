@@ -1,0 +1,29 @@
+[
+	{
+		"id": 1,
+		"website_url": "https://github.com",
+		"image_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+		"username": "github_user",
+		"password": "password1",
+		"created_date": "2023-10-01",
+		"website_name": "GitHub"
+	},
+	{
+		"id": 2,
+		"website_url": "https://stackoverflow.com",
+		"image_url": "https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.png",
+		"username": "stackoverflow_user",
+		"password": "password2",
+		"created_date": "2023-10-02",
+		"website_name": "Stack Overflow"
+	},
+	{
+		"id": 3,
+		"website_url": "https://www.reddit.com",
+		"image_url": "https://redditinc.com/hubfs/Reddit%20Inc/Brand/Reddit_Lockup_Logo.svg",
+		"username": "reddit_user",
+		"password": "password3",
+		"created_date": "2023-10-03",
+		"website_name": "Reddit"
+	}
+]
