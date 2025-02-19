@@ -22,6 +22,15 @@ const CategoryText = {
 
 
 const projects = [{
+	title: "Vehicle & Area Tracking Systems",
+	image: "Assets/Project/images/vehicle_tracking.png",
+	shortContent: "Backend systems built for tracking vehicles, areas, and optimizing delivery routes. <span class='text-muted'>see more...</span>",
+	description: `<p><strong>Vehicle & Area Tracking Systems</strong> involves the development of backend solutions for efficient tracking and route optimization across multiple client projects.</p><h5>Key Features:</h5><ul><li><strong>Vehicle Tracking:</strong> Real-time tracking of delivery vehicles using GPS data.</li><li><strong>PostGIS Integration:</strong> Utilizes PostGIS to track and store geospatial data of areas and locations.</li><li><strong>Delivery Route Optimization:</strong> Google Maps Matrix API integration to calculate the best routes for delivery vehicles.</li><li><strong>Legacy Code Optimization:</strong> Improved the performance of legacy database queries and models for existing systems.</li></ul><p>This backend solution plays a critical role in improving the efficiency of delivery operations for multiple clients, involving different systems tailored to their specific needs.</p>`,
+	links: {},
+	stack: ["PostGIS", "Google Maps Matrix API", "Django", "Python", "PostgreSQL", "HTML", "CSS", "JavaScript", "AJAX", "jQuery", "Bootstrap"],
+	status: "Completed",
+	category: ProjectCategory.CLIENT
+}, {
 	title: "Food For All",
 	image: "Assets/Project/images/foodforall/img1.png",
 	shortContent: "A platform that connects food donors with NGOs and volunteers to minimize food waste. <span class='text-muted'>see more...</span>",
