@@ -12,6 +12,13 @@ const CategoryColoriser = {
 	[ProjectCategory.CLIENT]: "dark"
 };
 
+const CategoryText = {
+	[ProjectCategory.ACADEMIC]: "light",
+	[ProjectCategory.HACKATHON]: "light",
+	[ProjectCategory.PERSONAL]: "dark",
+	[ProjectCategory.CLIENT]: "light"
+}
+
 
 
 const projects = [{

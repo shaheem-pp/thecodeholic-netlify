@@ -158,6 +158,8 @@
 			const container = document.getElementById("project-container");
 			container.innerHTML = ""; // Clear any existing content
 			projects.forEach((project, index) => {
+				const categoryColor = CategoryColoriser[project.category] || "secondary";
+				const categoryTextColor = CategoryText[project.category] || "light";
 				const card = document.createElement("div");
 				card.className = "col col-12 col-md-6 col-lg-4 mb-4";
 				card.innerHTML = `
@@ -170,7 +172,8 @@
 											<h5 class="card-title">${project.title}</h5>
 											<p class="card-text text-limit">${project.shortContent}</p>
 											<p class="card-text"><span
-													class="card-text badge text-bg-primary">${project.category}</span> ${getStatusBadge(project.status)}
+													class="card-text badge text-bg-${categoryColor} text-${categoryTextColor}">${project.category}</span>
+													${getStatusBadge(project.status)}
 											</p>
 										</div>
 										<!-- Hover Overlay with Magnifying Glass -->
