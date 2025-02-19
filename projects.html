@@ -218,6 +218,8 @@
 			projectModal.show();
 			// Ensure the backdrop is removed when modal is fully closed
 			document.getElementById("projectModal").addEventListener("hidden.bs.modal", function () {
+				document.body.style.overflow = '';
+				document.body.style.paddingRight = '';
 				document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
 			});
 		}
