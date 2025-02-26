@@ -1,78 +1,78 @@
- /* Achievements Custom CSS */
- .achievements-scroller {
-	margin:0;
-	padding:0;
- 	overflow-x: auto;
- 	overflow-y: hidden;
- 	scroll-behavior: smooth;
- 	-webkit-overflow-scrolling: touch;
- }
+/* Achievements Custom CSS */
+.achievements-scroller {
+	margin: 0;
+	padding: 0;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+}
 
- .achievement-card {
- 	flex: 0 0 auto;
- 	width: 400px;
- 	height: 100%;
- 	margin: 1.5rem;
- 	scroll-snap-align: start;
- }
+.achievement-card {
+	flex: 0 0 auto;
+	width: 400px;
+	height: 100%;
+	margin: 1.5rem;
+	scroll-snap-align: start;
+}
 
- @media (max-width: 768px) {
- 	.achievement-card {
- 		width: calc(90vw - 2rem);
- 		margin: 1rem;
- 	}
- }
+@media (max-width: 768px) {
+	.achievement-card {
+		width: calc(90vw - 2rem);
+		margin: 1rem;
+	}
+}
 
- .achievement-card .card {
- 	height: 100%;
- 	display: flex;
- 	flex-direction: column;
- }
+.achievement-card .card {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
 
- .achievement-card .card-body {
- 	flex: 1;
- 	display: flex;
- 	flex-direction: column;
- }
+.achievement-card .card-body {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
 
- .achievement-card .card-text {
- 	flex-grow: 1;
- 	overflow-y: auto;
- }
+.achievement-card .card-text {
+	flex-grow: 1;
+	overflow-y: auto;
+}
 
- #skills-section {
-	margin:0;
-	padding:0;
- 	width: 100%;
- 	display: flex;
- 	flex-wrap: nowrap;
- 	overflow-x: auto;
- 	overflow-y: hidden;
- 	scroll-behavior: smooth;
- 	-webkit-overflow-scrolling: touch;
- }
+#skills-section {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+}
 
- .skill-icon {
- 	min-width: 3rem;
- 	min-height: 3rem;
- 	display: flex;
- 	align-content: center;
- 	justify-content: center;
- 	align-items: center;
- }
+.skill-icon {
+	min-width: 3rem;
+	min-height: 3rem;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
 
- .skill-card {
- 	flex: 0 0 auto;
- 	width: 400px;
- 	height: 100%;
- 	margin: 1.5rem;
- 	scroll-snap-align: start;
- }
+.skill-card {
+	flex: 0 0 auto;
+	width: 400px;
+	height: 100%;
+	margin: 1.5rem;
+	scroll-snap-align: start;
+}
 
 
- @media (max-width: 768px) {
- 	.skill-card {
- 		width: calc(90vw - 2rem);
- 		margin: 1rem;
- 	}
- }
+@media (max-width: 768px) {
+	.skill-card {
+		width: calc(90vw - 2rem);
+		margin: 1rem;
+	}
+}

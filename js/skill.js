@@ -62,9 +62,9 @@ const skillsData = [{
 function generateSkillsCards() {
 	const container = document.getElementById('skills-section');
 	skillsData.forEach(skillCategory => {
-			const skillCard = document.createElement('div');
-			skillCard.classList.add('skill-card');
-			skillCard.innerHTML = `
+		const skillCard = document.createElement('div');
+		skillCard.classList.add('skill-card');
+		skillCard.innerHTML = `
 			<div class="card border-0 rounded-4 h-100 m-0 p-0">
 				<div class="card-body p-5 m-0">
 					<div class="d-flex align-items-center p-2 flex-nowrap">
@@ -85,7 +85,6 @@ function generateSkillsCards() {
 				</div>
 			</div>
 		`;
-			container.appendChild(skillCard);
-		}
-	);
+		container.appendChild(skillCard);
+	});
 }

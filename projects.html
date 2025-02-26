@@ -112,9 +112,9 @@
 						</div>
 						<div class="modal-body">
 							<!-- <div class="pb-3"
-								style="display: flex;flex-wrap: nowrap;align-content: center;justify-content: space-between;align-items: center;">
-								
-							</div> -->
+							style="display: flex;flex-wrap: nowrap;align-content: center;justify-content: space-between;align-items: center;">
+							
+						</div> -->
 							<img id="modalImage" class="img-fluid mb-3 rounded-4" src="" alt="Project Image">
 							<div id="modalLinks" class="py-2 pb-3 text-left"></div>
 							<div id="modalDescription"></div>
@@ -204,12 +204,12 @@
 											</p>
 										</div>
 										<!-- Hover Overlay with Magnifying Glass -->
-										<div class="overlay d-flex align-items-center justify-content-center" data-index="${index}" data-bs-toggle="modal"
-				data-bs-target="#projectModal">
-											<i class="bi bi-search fs-1 text-white"></i>
-										</div>
-									</div>
-		`;
+			<div class="overlay d-flex align-items-center justify-content-center" data-index="${index}" data-bs-toggle="modal"
+			data-bs-target="#projectModal">
+			<i class="bi bi-search fs-1 text-white"></i>
+			</div>
+			</div>
+			`;
 				// Append card to container
 				container.appendChild(card);
 			});
@@ -235,6 +235,7 @@
 				modalLink.innerHTML = "";
 				Object.entries(project.links).forEach(([icon, link]) => {
 					modalLink.innerHTML +=
+
 						`<a href="${link}" target="_blank" class="btn btn-outline-dark me-2"><i class="${icon}"></i></a>`;
 				});
 			} else {
