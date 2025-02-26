@@ -30,21 +30,21 @@ function generateAchievementsCards() {
 		achievementCard.classList.add('achievement-card');
 
 		achievementCard.innerHTML = `
-      <div class="card shadow border-0 rounded-4 h-100">
-        <div class="card-body p-4">
-          <div class="bg-light p-3 rounded-4 mb-3 text-center">
-            <img src="${achievement.imageUrl}" alt="${achievement.title}" class="img-fluid" style="height: 5rem; object-fit: contain;">
-          </div>
-          <div class="pt-2 card-text">
-            <p class="mb-2"><strong>${achievement.title}</strong> | ${achievement.role}</p>
-            <p class="small mb-0">
-              ${achievement.description}
-              <a href="${achievement.link}" target="_blank" class="text-decoration-none">Learn more</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    `;
+      		<div class="card border-0 rounded-4 h-100 m-0 p-0">
+				<div class="card-body p-5 m-0">
+          			<div class="bg-light p-3 rounded-4 mb-3 text-center">
+            			<img src="${achievement.imageUrl}" alt="${achievement.title}" class="img-fluid" style="height: 5rem; object-fit: contain;">
+          			</div>
+          			<div class="pt-2 card-text">
+            			<p class="mb-2"><strong>${achievement.title}</strong> | ${achievement.role}</p>
+            			<p class="small mb-0">
+              				${achievement.description}
+              				<a href="${achievement.link}" target="_blank" class="text-decoration-none">Learn more</a>
+            			</p>
+          			</div>
+        		</div>
+      		</div>
+    	`;
 
 		container.appendChild(achievementCard);
 	});

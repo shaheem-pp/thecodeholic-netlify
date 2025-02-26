@@ -61,57 +61,31 @@ const skillsData = [{
 // Function to generate the skills cards dynamically
 function generateSkillsCards() {
 	const container = document.getElementById('skills-section');
-
 	skillsData.forEach(skillCategory => {
-		const skillCard = document.createElement('div');
-		skillCard.classList.add('card', 'shadow', 'border-0', 'rounded-4', 'mb-5');
-
-		skillCard.innerHTML = `
-			<div class="card-body p-5 m-0">
-				<div style="
-							display: flex;
-							flex-direction: row;
-							flex-wrap: nowrap;
-							align-content: center;
-							justify-content: flex-start;
-							align-items: center;
-				">
-					<div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-						<i class="${skillCategory.icon}"></i>
-					</div>
-					<h5>${skillCategory.category}</h5>
-				</div>
-				<div class="row">
-					${skillCategory.skills.map(skill => `
-						<div class="col col-md-4 p-2">
-							<div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-								${skill}
-							</div>
+			const skillCard = document.createElement('div');
+			skillCard.classList.add('skill-card');
+			skillCard.innerHTML = `
+			<div class="card border-0 rounded-4 h-100 m-0 p-0">
+				<div class="card-body p-5 m-0">
+					<div class="d-flex align-items-center p-2 flex-nowrap">
+						<div class="skill-icon bg-primary bg-gradient-primary-to-secondary text-white rounded-3 p-2 m-1">
+							<i class="${skillCategory.icon}"></i>
 						</div>
-					`).join('')}
+						<h5>${skillCategory.category}</h5>
+					</div>
+					<div class="row">
+						${skillCategory.skills.map(skill => `
+							<div class="col-12 p-2">
+								<div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+									${skill}
+								</div>
+							</div>
+						`).join('')}
+					</div>
 				</div>
 			</div>
-    	`;
-
-		container.appendChild(skillCard);
-	});
+		`;
+			container.appendChild(skillCard);
+		}
+	);
 }
-
-//   <div class="card-body p-5">
-//     <div class="row align-items-center gx-5">
-//       <div class="d-flex align-items-center p-2">
-//         <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-//           <i class="${skillCategory.icon}"></i>
-//         </div>
-//         <h5 class="mb-0">${skillCategory.category}</h5>
-//       </div>
-
-//       <div class="row row-cols-1 row-cols-md-3 p-2">
-//         ${skillCategory.skills.map(skill => `
-//           <div class="col">
-//             <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">${skill}</div>
-//           </div>
-//         `).join('')}
-//       </div>
-//     </div>
-//   </div>
