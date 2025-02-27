@@ -25,27 +25,52 @@ const achievementsData = [{
 function generateAchievementsCards() {
 	const container = document.getElementById('achievements-section');
 
+	// Clear existing content and add Swiper structure
+	container.innerHTML = `
+        <div class="swiper-wrapper"></div>
+        <div class="swiper-pagination"></div>
+    `;
+
+	const wrapper = container.querySelector('.swiper-wrapper');
+
 	achievementsData.forEach(achievement => {
-		const achievementCard = document.createElement('div');
-		achievementCard.classList.add('achievement-card');
+		const slide = document.createElement('div');
+		slide.classList.add('swiper-slide');
+		slide.innerHTML = `
+            <div class="card border-0 rounded-4 h-100 m-0 p-0">
+                <div class="card-body p-5 m-0">
+                    <div class="bg-light p-3 rounded-4 mb-3 text-center">
+                        <img src="${achievement.imageUrl}" alt="${achievement.title}" 
+                             class="img-fluid" style="height: 5rem; object-fit: contain;">
+                    </div>
+                    <div class="pt-2 card-text">
+                        <p class="mb-2"><strong>${achievement.title}</strong> | ${achievement.role}</p>
+                        <p class="small mb-0">
+                            ${achievement.description}
+                            <a href="${achievement.link}" target="_blank" 
+                               class="text-decoration-none">Learn more</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        `;
+		wrapper.appendChild(slide);
+	});
 
-		achievementCard.innerHTML = `
-      		<div class="card border-0 rounded-4 h-100 m-0 p-0">
-				<div class="card-body p-5 m-0">
-          			<div class="bg-light p-3 rounded-4 mb-3 text-center">
-            			<img src="${achievement.imageUrl}" alt="${achievement.title}" class="img-fluid" style="height: 5rem; object-fit: contain;">
-          			</div>
-          			<div class="pt-2 card-text">
-            			<p class="mb-2"><strong>${achievement.title}</strong> | ${achievement.role}</p>
-            			<p class="small mb-0">
-              				${achievement.description}
-              				<a href="${achievement.link}" target="_blank" class="text-decoration-none">Learn more</a>
-            			</p>
-          			</div>
-        		</div>
-      		</div>
-    	`;
+	// Initialize Swiper
+	new Swiper(container, {
+		slidesPerView: 1,
+		centeredSlides: true,
+		freeMode: true,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			dynamicBullets: true,
+			dynamicMainBullets: 3,
+			autoplay: {
+				delay: 1000,
+			},
+		},
 
-		container.appendChild(achievementCard);
 	});
 }
