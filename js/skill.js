@@ -57,59 +57,79 @@ const skillsData = [{
 	}
 ];
 
-
-// Function to generate the skills cards dynamically
 function generateSkillsCards() {
 	const container = document.getElementById('skills-section');
 
 	container.innerHTML = `
-        <div class="swiper-wrapper"></div>
-        <div class="swiper-pagination"></div>
-    `;
+		<div class="swiper">
+			<div class="swiper-wrapper"></div>
+			<div class="swiper-pagination"></div>
+		</div>
+	`;
 
-	const wrapper = container.querySelector('.swiper-wrapper');
+	const swiperEl = container.querySelector('.swiper');
+	const wrapper = swiperEl.querySelector('.swiper-wrapper');
 
 	skillsData.forEach(skillCategory => {
 		const slide = document.createElement('div');
 		slide.classList.add('swiper-slide');
 		slide.innerHTML = `
-            <div class="card border-0 rounded-4 h-100 m-0 p-0">
-                <div class="card-body p-5 m-0">
-                    <div class="d-flex align-items-center p-2 flex-nowrap">
-                        <div class="skill-icon bg-primary bg-gradient-primary-to-secondary text-white rounded-3 p-2 m-1">
-                            <i class="${skillCategory.icon}"></i>
-                        </div>
-                        <h5>${skillCategory.category}</h5>
-                    </div>
-                    <div class="row">
-                        ${skillCategory.skills.map(skill => `
-                            <div class="col-12 p-2">
-                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                    ${skill}
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-            </div>
-        `;
+			<div class="card border-0 rounded-4 h-100 m-0 p-0 skill-card" style="width: 300px;">
+				<div class="card-body p-5 m-0">
+					<div class="d-flex align-items-center p-2 flex-nowrap">
+						<div class="skill-icon bg-primary bg-gradient-primary-to-secondary text-white rounded-3 p-2 m-1">
+							<i class="${skillCategory.icon}"></i>
+						</div>
+						<h5>${skillCategory.category}</h5>
+					</div>
+					<div class="row">
+						${skillCategory.skills.map(skill => `
+							<div class="col-12 p-2">
+								<div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+									${skill}
+								</div>
+							</div>
+						`).join('')}
+					</div>
+				</div>
+			</div>
+		`;
 		wrapper.appendChild(slide);
 	});
 
-	// Initialize Swiper
-	new Swiper(container, {
-		slidesPerView: 1,
-		centeredSlides: true,
-		freeMode: true,		
+	new Swiper(swiperEl, {
+		slidesPerView: 'auto', // Use auto instead of fixed numbers
+		centeredSlides: false,
+		spaceBetween: 20,
+		freeMode: {
+			enabled: true,
+			sticky: false, // Disable sticky free mode
+			momentumBounce: false,
+		},
+		grabCursor: true,
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
-			dynamicBullets: true,
-			dynamicMainBullets: 3,
-			autoplay: {
-				delay: 1000,
-			},
 		},
-		
+		breakpoints: {
+			640: {
+				slidesPerView: 'auto',
+				spaceBetween: 25
+			},
+			1024: {
+				slidesPerView: 'auto',
+				spaceBetween: 30
+			}
+		},
+		autoplay: {
+			delay: 1500,
+			disableOnInteraction: false,
+		},
+		// Add these observer properties
+		observer: true,
+		observeParents: true,
+		// Enable edge resistance
+		resistance: true,
+		resistanceRatio: 0.5
 	});
 }

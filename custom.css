@@ -1,21 +1,43 @@
-/* Achievements & Skills Swiper Containers */
-
-#achievements-section,
-#skills-section {
-	padding: 2rem !important;
-	position: relative;
+/* Add to your existing CSS */
+.swiper {
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
 }
 
 .swiper-slide {
-	flex-shrink: 1;
-	width: 100% !important;
+	width: 300px !important; /* Fixed width for slides */
+	height: auto !important;
+	margin-right: 15px !important;
+}
+
+.skill-card {
+	width: 100%;
 	height: 100%;
-	position: relative;
-	transition-property: transform;
-	display: block;
-	padding: 1rem !important;
-	margin: 0 !important;
+	box-sizing: border-box;
+}
+
+/* Prevent text overflow in skill items */
+.d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 {
+	word-wrap: break-word;
+	white-space: normal;
+}
+
+/* Add smooth transitions */
+.swiper-slide {
+	transition: transform 0.3s ease-in-out;
+}
+
+/* Better mobile experience */
+@media (max-width: 640px) {
+	.swiper-slide {
+		width: 280px !important;
+		margin-right: 10px !important;
+	}
+	
+	.card-body {
+		padding: 1.5rem !important;
+	}
 }
 
 .skill-icon {
@@ -26,4 +48,8 @@
 	align-content: center;
 	justify-content: center;
 	align-items: center;
+}
+
+.whole-card{
+	
 }
