@@ -3,22 +3,31 @@ const ProjectCategory = {
     HACKATHON: "Hackathon Project",
     PERSONAL: "Personal Project",
     CLIENT: "Client Project",
-    PROFESSIONAL: "Professional Project"
-}
+    PROFESSIONAL: "Professional Project",
+    LEARNING: "Learning Project",
+    GUIDED: "Guided Project",
+};
+
 const CategoryColoriser = {
     [ProjectCategory.ACADEMIC]: "primary",
     [ProjectCategory.HACKATHON]: "secondary",
     [ProjectCategory.PERSONAL]: "info",
     [ProjectCategory.CLIENT]: "dark",
-    [ProjectCategory.PROFESSIONAL]: "dark"
-}
+    [ProjectCategory.PROFESSIONAL]: "dark",
+    [ProjectCategory.LEARNING]: "dark",
+    [ProjectCategory.GUIDED]: "secondary",
+};
+
 const CategoryText = {
     [ProjectCategory.ACADEMIC]: "light",
     [ProjectCategory.HACKATHON]: "light",
     [ProjectCategory.PERSONAL]: "dark",
     [ProjectCategory.CLIENT]: "light",
-    [ProjectCategory.PROFESSIONAL]: "light"
-}
+    [ProjectCategory.PROFESSIONAL]: "light",
+    [ProjectCategory.LEARNING]: "light",
+    [ProjectCategory.GUIDED]: "secondary",
+};
+
 const projects = [{
     title: "Carro App",
     image: "Assets/Project/images/Cynbus/Carro.png",
@@ -33,7 +42,7 @@ const projects = [{
     category: ProjectCategory.PROFESSIONAL
 }, {
     title: "Shoapp",
-    image: "Assets/Project/images/Cynbus/shoapp.png",
+    image: "Assets/Project/images/Cynbus/ShoApp.png",
     shortContent: "Shoapp brings the mall to your fingertips, allowing you to shop from local stores and get everything delivered right to your doorstep. <span class='text-muted'>see more...</span>",
     description: "<h5>Shoapp - Your Ultimate Local Shopping Companion</h5><p>Shoapp, the app that revolutionizes shopping by bringing local stores right to your fingertips.</p><h5>Key Features:</h5><ul>    <li><strong>Shop From Local Stores:</strong> Access a wide range of products from local stores, including groceries, fashion, electronics, and home decor.</li>    <li><strong>Compare Prices and Deals:</strong> Compare prices and find exclusive deals to ensure you always get the best value.</li>    <li><strong>Nearby Store Locator:</strong> Find nearby stores and view their available stock, saving time by showing the closest options.</li>    <li><strong>Convenient Delivery:</strong> Place orders with ease, and trusted delivery partners will bring purchases to your doorstep.</li>    <li><strong>Shopping History & Favorites:</strong> Track your shopping history and save favorite items for quick reordering.</li>    <li><strong>Tailored Recommendations:</strong> Get personalized product and deal recommendations based on your shopping preferences.</li>    <li><strong>User-Friendly Interface:</strong> Enjoy a simple and intuitive interface, making it easy for users of all ages.</li></ul>",
     links: {
@@ -55,11 +64,23 @@ const projects = [{
     title: "Web Builder",
     image: "Assets/Project/images/web builder/web-builder.webp",
     shortContent: "A Shopify alternative for Kerala businesses, offering custom domains, themes, and e-commerce management. <span class='text-muted'>see more...</span>",
-    description: "        <p><strong>Web Builder</strong> is a powerful e-commerce platform designed as a localized alternative to Shopify and Dhukhaan, tailored specifically for businesses in Kerala.</p>        <h5>Key Features:</h5>        <ul>            <li><strong>Easy Store Setup:</strong> Business owners can launch their online store with just a few clicks, without any coding knowledge.</li>            <li><strong>Custom Domains & Branding:</strong> Allows users to connect their own domain and personalize storefronts with unique themes.</li>            <li><strong>Flexible Product Management:</strong> Simplified inventory handling, pricing controls, and order tracking.</li>            <li><strong>Payment Gateway Integration:</strong> Supports local and global payment solutions for seamless transactions.</li>            <li><strong>Built-in SEO & Analytics:</strong> Helps businesses improve visibility and track performance effortlessly.</li>            <li><strong>Scalable & Affordable:</strong> A cost-effective solution compared to international platforms, with features tailored for local market needs.</li>        </ul>        <p>Designed to empower small and medium-sized businesses, <em>Web Builder</em> bridges the gap between local entrepreneurs and digital commerce, making online selling more accessible and profitable.</p>",
+    description: "<p><strong>Web Builder</strong> is a powerful e-commerce platform designed as a localized alternative to Shopify and Dhukhaan, tailored specifically for businesses in Kerala.</p>        <h5>Key Features:</h5>        <ul>            <li><strong>Easy Store Setup:</strong> Business owners can launch their online store with just a few clicks, without any coding knowledge.</li>            <li><strong>Custom Domains & Branding:</strong> Allows users to connect their own domain and personalize storefronts with unique themes.</li>            <li><strong>Flexible Product Management:</strong> Simplified inventory handling, pricing controls, and order tracking.</li>            <li><strong>Payment Gateway Integration:</strong> Supports local and global payment solutions for seamless transactions.</li>            <li><strong>Built-in SEO & Analytics:</strong> Helps businesses improve visibility and track performance effortlessly.</li>            <li><strong>Scalable & Affordable:</strong> A cost-effective solution compared to international platforms, with features tailored for local market needs.</li>        </ul>        <p>Designed to empower small and medium-sized businesses, <em>Web Builder</em> bridges the gap between local entrepreneurs and digital commerce, making online selling more accessible and profitable.</p>",
     links: {},
     stack: ["Django", "Python", "PostgreSQL", "HTML", "CSS", "JavaScript", "AJAX", "jQuery", "Bootstrap"],
     status: "Completed",
     category: ProjectCategory.CLIENT
+},{
+    title: "Dattebayo",
+    image: "Assets/Project/images/react/dattebayo.png",
+    shortContent: "A React app built to showcase all characters in Naruto Anime. <span class='text-muted'>see more...</span>",
+    description: "<p><strong>Narutopedia</strong> or <strong>Dattebayo</strong> is a web platform built as part of my learning React using Typescript it uses <a href='https://api-dattebayo.vercel.app/docs' target='_blank'>Dattebayo API</a>. I tried to use proper architectures to learn how to reuse a component. </p>",
+    links: {
+        "bi bi-github": "https://github.com/shaheem-pp/dattebayo-react-ts",
+        "bi bi-globe2": "https://dattebayo-react-ts.vercel.app/"
+    },
+    stack: ["React", "TypeScript"],
+    status: "Completed",
+    category: ProjectCategory.LEARNING
 }, {
     title: "Food For All",
     image: "Assets/Project/images/foodforall/img1.png",
