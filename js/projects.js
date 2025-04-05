@@ -14,7 +14,7 @@ const CategoryColoriser = {
     [ProjectCategory.PERSONAL]: "info",
     [ProjectCategory.CLIENT]: "dark",
     [ProjectCategory.PROFESSIONAL]: "dark",
-    [ProjectCategory.LEARNING]: "dark",
+    [ProjectCategory.LEARNING]: "secondary",
     [ProjectCategory.GUIDED]: "secondary",
 };
 
@@ -25,10 +25,22 @@ const CategoryText = {
     [ProjectCategory.CLIENT]: "light",
     [ProjectCategory.PROFESSIONAL]: "light",
     [ProjectCategory.LEARNING]: "light",
-    [ProjectCategory.GUIDED]: "secondary",
+    [ProjectCategory.GUIDED]: "light",
 };
 
 const projects = [{
+    title: "Agua India App",
+    image: "Assets/Project/images/agua/appBanner.png",
+    shortContent: "A premium packaged drinking water delivery app offering a wide range of products and services. <span class='text-muted'>see more...</span>",
+    description: "<h5>Agua India App - Your Premium Water Delivery Service</h5><p>The Agua India App simplifies premium bottled water delivery, offering a wide variety of products with fast, reliable service and real-time tracking for efficient delivery.</p><h5>Key Features:</h5><ul>    <li><strong>Wide Range of Products:</strong> Choose from 20L water jars, dispensers, and accessories, from top brands like Bisleri, Bailley, Caspian, and Officers Choice Blue.</li>    <li><strong>Affordable Pricing and Offers:</strong> Buy at low prices with great discounts, coupon offers, and promotions.</li>    <li><strong>Fast and Secure Checkout:</strong> Payment options include net-banking, UPI, credit/debit cards, and e-wallets.</li>    <li><strong>Assured Quality:</strong> Sourced from well-recognized water plants, ensuring the best quality water for consumers.</li>    <li><strong>On-time Delivery:</strong> Products delivered within 24 hours, increasing reliability and customer trust.</li></ul><h5>Impact:</h5><ul>    <li><strong>Order Processing Efficiency:</strong> Optimized workflows reducing delivery time by 20%, leading to a 25% increase in customer satisfaction.</li>    <li><strong>Vendor Dashboard:</strong> Developed a real-time analytics dashboard, improving sales productivity by 40% for vendors.</li>    <li><strong>Scalable Backend:</strong> Built and maintained the backend for 20,000+ users across Kochi, Chennai, Hyderabad, and Bangalore, ensuring reliable service across these cities.</li>    <li><strong>Uptime & Reliability:</strong> Ensured 99% uptime by resolving issues promptly, keeping customer experience consistent and reliable.</li></ul><h5>Improvements:</h5><ul>    <li>Optimized legacy code and database queries, significantly improving performance.</li>    <li>Enhanced user interface for a smoother, more intuitive experience.</li>    <li>Increased service area coverage, making Agua India available in more locations.</li></ul>",
+    links: {
+        "bi bi-apple": "https://apps.apple.com/in/app/agua-india/id1503679371?platform=iphone",
+        "bi bi-google": "https://play.google.com/store/apps/details?id=appu.agua&hl=en_IN"
+    },
+    stack: ["PostGIS", "Google Maps Matrix API", "Django", "Python", "PostgreSQL", "HTML", "CSS", "JavaScript", "AJAX", "jQuery", "Bootstrap"],
+    status: "Completed",
+    category: ProjectCategory.PROFESSIONAL
+},{
     title: "Carro App",
     image: "Assets/Project/images/Cynbus/Carro.png",
     shortContent: "A comprehensive car care app offering services like car wash booking, used car valuation, and service comparison. <span class='text-muted'>see more...</span>",
